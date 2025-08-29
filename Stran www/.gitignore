@@ -1,0 +1,28 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# Builds / caches
+node_modules/
+dist/
+build/
+coverage/
+.parcel-cache/
+.sass-cache/
+.tmp/
+.history/
+
+# Others
+*.local
+*.tmp
