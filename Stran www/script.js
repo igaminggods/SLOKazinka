@@ -1,4 +1,4 @@
-// Smooth scroll for internal links
+// Gladko drsenje za notranje povezave
 document.addEventListener('click', function(e){
 	const target = e.target.closest('a[href^="#"]');
 	if(!target) return;
@@ -9,12 +9,12 @@ document.addEventListener('click', function(e){
 	el.scrollIntoView({behavior:'smooth', block:'start'});
 });
 
-// Current year in footer
+// Trenutno leto v nogi strani
 document.addEventListener('DOMContentLoaded', function(){
 	const yearEl = document.getElementById('year');
 	if(yearEl){ yearEl.textContent = new Date().getFullYear(); }
 
-	// Progressive logo loader: tries multiple folders and extensions
+	// Postopen nalagalnik logotipov: preizkusi več map in končnic
 	const tryOrder = ['webp','png','jpg','jpeg'];
 	const tryDirs = ['img/','stran 22/img/','stran%2022/img/','Stran 22/img/','Stran%2022/img/'];
 	const logos = document.querySelectorAll('img[data-logo-base]');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		let idx = 0;
 		let dirIdx = 0;
 		function tryNext(){
-			if(dirIdx >= tryDirs.length) return; // give up silently
+			if(dirIdx >= tryDirs.length) return; // tiho prekini, če ni zadetkov
 			if(idx >= tryOrder.length){ idx = 0; dirIdx++; }
 			if(dirIdx >= tryDirs.length) return;
 			const ext = tryOrder[idx++];
@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 });
 
-// Track play button clicks (placeholder for analytics)
+// Sledenje klikom gumba za igranje (rezerva za analitiko)
 document.addEventListener('click', function(e){
 	const btn = e.target.closest('.js-play-btn');
 	if(!btn) return;
-	const casinoName = btn.getAttribute('data-casino') || 'Unknown';
-	console.log('Play click:', casinoName);
+	const casinoName = btn.getAttribute('data-casino') || 'Neznano';
+	console.log('Klik na IGRAJ ZDAJ:', casinoName);
 });
 
 
